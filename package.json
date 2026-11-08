@@ -1,6 +1,6 @@
 {
   "name": "dsh-session-active-top",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Raise running conversations to the top of the workspace session directory.",
   "type": "module",
   "main": "lib/index.js",

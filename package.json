@@ -1,0 +1,53 @@
+{
+  "name": "dsh-session-active-top",
+  "version": "0.1.0",
+  "description": "Raise running conversations to the top of the workspace session directory.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "cordis.patch.yml",
+    "LICENSE",
+    "README.md",
+    "FEEDBACK.md"
+  ],
+  "license": "MIT",
+  "author": "JohnshyCY",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnshyCY/dsh-session-active-top.git"
+  },
+  "homepage": "https://github.com/JohnshyCY/dsh-session-active-top#readme",
+  "bugs": {
+    "url": "https://github.com/JohnshyCY/dsh-session-active-top/issues"
+  },
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "session",
+    "pin"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-api-workspace-controller",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ],
+      "platform": "web"
+    }
+  }
+}
